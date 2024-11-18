@@ -16,7 +16,7 @@ config:
         linear_alpha: 32
       save:
         dtype: float16
-        save_every: 50
+        save_every: 500
         max_step_saves_to_keep: 4
         push_to_hub: false
       datasets:
@@ -25,7 +25,7 @@ config:
           caption_dropout_rate: 0.05 
           shuffle_tokens: false 
           cache_latents_to_disk: true  
-          resolution: [1024]
+          resolution: [1440]
       train:
         batch_size: 1
         steps: 2000
@@ -60,8 +60,8 @@ config:
       sample:
         sampler: "flowmatch" # must match train.noise_scheduler
         sample_every: 200 # sample every this many steps
-        width: 1024
-        height: 1024
+        width: 1440
+        height: 1440
         neg: ""  # not used on flux
         seed: 42
         walk_seed: true
